@@ -14,3 +14,8 @@ create policy requests_insert_self on blood_requests for insert to authenticated
 create policy stock_read_auth on blood_units for select to authenticated using(true);create policy stock_staff_manage on blood_units for all to authenticated using(app_role() in('staff','admin')) with check(app_role() in('staff','admin'));
 create policy workflow_staff_read on workflow_records for select to authenticated using(app_role() in('staff','admin'));create policy workflow_staff_manage on workflow_records for all to authenticated using(app_role() in('staff','admin')) with check(app_role() in('staff','admin'));
 grant select,insert,update on profiles,donors,blood_requests to authenticated;grant select,insert,update,delete on blood_units,workflow_records to authenticated;
+
+-- Prevent users from self-promoting by changing their profile role.
+create or replace function public.guard_profile_role_change() returns trigger language plpgsql security definer set search_path=public as $$begin if new.role is distinct from old.role and public.app_role() not in ('staff','admin') then raise exception 'Only staff/admin may change profile roles'; end if; return new; end$$;
+drop trigger if exists guard_profile_role on public.profiles;
+create trigger guard_profile_role before update on public.profiles for each row execute function public.guard_profile_role_change();
