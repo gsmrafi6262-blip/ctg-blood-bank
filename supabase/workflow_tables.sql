@@ -18,7 +18,7 @@ create table if not exists public.processing_records(
  component text not null, processed_by uuid references auth.users(id), status text not null default 'pending',
  notes text, created_at timestamptz default now());
 create table if not exists public.compatibility_tests(
- id uuid primary primary key default gen_random_uuid(), request_id uuid references public.blood_requests(id) on delete cascade,
+ id uuid primary key default gen_random_uuid(), request_id uuid references public.blood_requests(id) on delete cascade,
  blood_unit_id uuid references public.blood_units(id), performed_by uuid references auth.users(id),
  result_status text not null default 'pending', reviewed_by uuid references auth.users(id), notes text, created_at timestamptz default now());
 create table if not exists public.blood_issues(
