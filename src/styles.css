@@ -41,3 +41,11 @@ th{background:#f0eeee;color:#8c1111}td{color:#303030;background:#fff}table{borde
 .splash-start:active{transform:scale(.97)}
 @keyframes splashFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 @keyframes heartBeat{0%,100%{transform:scale(1)}12%{transform:scale(1.08)}22%{transform:scale(1)}35%{transform:scale(1.04)}}
+
+/* Ajab Nur Begum Foundation splash artwork */
+.foundation-splash{padding:0;min-height:100svh;background:#e31b25;display:block;overflow:hidden}
+.foundation-splash-inner{position:relative;width:100%;height:100svh;min-height:620px;max-height:1100px;margin:0 auto}
+.foundation-splash-art{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+.foundation-start{position:absolute;left:50%;bottom:7.5%;transform:translateX(-50%);width:70%;height:7.4%;min-height:48px;border:0;border-radius:40px;background:transparent;color:transparent;opacity:.02;cursor:pointer}
+.foundation-start:focus-visible{opacity:.4;outline:3px solid #fff}
+@media(max-width:520px){.foundation-splash-inner{min-height:100svh;max-height:none}.foundation-splash-art{object-fit:fill}.foundation-start{bottom:7.5%;height:7.4%;width:70%}}
