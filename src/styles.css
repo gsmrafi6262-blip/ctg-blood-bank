@@ -122,3 +122,12 @@ th{background:#f0eeee;color:#8c1111}td{color:#303030;background:#fff}table{borde
 @media(max-width:380px){.home-ref-quick button{min-height:112px}.home-ref-quick b{font-size:12px}.ref-avatar{width:56px;height:56px}.home-ref-section-title h3{font-size:12px}.home-ref-brand h2{font-size:14px}}
 /* Five-item screenshot navigation */
 @media(max-width:760px){.mobile-bottom-nav{grid-template-columns:repeat(5,minmax(0,1fr));min-height:70px}.bottom-nav-item{font-size:11px;gap:4px}.bottom-nav-item svg{width:23px;height:23px}body{padding-bottom:calc(80px + env(safe-area-inset-bottom))}}
+
+/* Developer profile shown from the Settings/Developer bottom tab */
+.developer-profile-card{max-width:460px;margin:12px auto;padding:22px 18px 24px;border:1px solid #eee1e6;border-radius:24px;background:linear-gradient(160deg,#fff,#fff5f7);box-shadow:0 10px 30px #d20d2110;text-align:center}
+.developer-profile-photo{display:block;width:170px;height:170px;object-fit:cover;object-position:center 30%;border-radius:50%;border:5px solid #fff;outline:3px solid #e21b30;box-shadow:0 8px 22px #bc122522;margin:0 auto 18px}
+.developer-profile-card h3{margin:0;color:#b80d20;font-size:24px;font-weight:900;letter-spacing:.4px}
+.developer-profile-card p{margin:8px 0;color:#34343b;font-weight:600}
+.developer-profile-card small{display:inline-block;color:#164a95;font-weight:800;background:#edf3ff;border-radius:20px;padding:7px 14px}
+.developer-profile-note{font-size:13px;color:#777!important;font-weight:500!important;margin-top:15px!important}
+@media(max-width:760px){.developer-profile-card{padding:18px 14px}.developer-profile-photo{width:148px;height:148px}.developer-profile-card h3{font-size:21px}}
