@@ -153,3 +153,6 @@ th{background:#f0eeee;color:#8c1111}td{color:#303030;background:#fff}table{borde
 .home-ref-tools-spacer{flex:1}
 .home-ref-tools button{font-size:27px;font-weight:900;line-height:1;color:#c81025;background:#f0f2ff;border:1px solid #e8e9f6}
 .home-ref-tools .home-ref-account-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:100}
+
+/* Header account menu moved up; remove duplicate Home dashboard controls */
+.top{display:flex;align-items:center;gap:8px}.top-account{position:relative;margin-left:auto;flex-shrink:0}.top-account-trigger{width:42px;height:42px;border-radius:14px;border:1px solid #ffffff55;background:#ffffff18;color:#fff;font-size:25px;line-height:1;cursor:pointer}.top-account .home-ref-account-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:150;min-width:190px}.home-ref-tools{display:none!important}
