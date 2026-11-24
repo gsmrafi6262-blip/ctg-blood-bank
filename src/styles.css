@@ -159,3 +159,32 @@ th{background:#f0eeee;color:#8c1111}td{color:#303030;background:#fff}table{borde
 
 /* FIX: Both navigation controls stay in the top header on all screen sizes */
 .top{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;min-height:60px!important;padding:10px 14px!important;position:sticky!important;top:0!important;z-index:100!important}.top-menu-trigger{display:grid!important;place-items:center!important;flex:0 0 40px!important;width:40px!important;height:40px!important;border-radius:12px!important;background:#ffffff22!important;border:1px solid #ffffff50!important;color:#fff!important;font-size:23px!important;line-height:1!important;padding:0!important}.top .brand{display:block!important;flex:1!important;min-width:0!important;white-space:normal!important;line-height:1.2!important;font-size:clamp(14px,4vw,19px)!important}.top-account{display:block!important;position:relative!important;flex:0 0 40px!important;margin-left:0!important}.top-account-trigger{display:grid!important;place-items:center!important;width:40px!important;height:40px!important}.home-ref-tools{display:none!important}
+
+/* FINAL MOBILE HEADER FIX: visible red top bar with both controls */
+.top{
+  width:100%!important;box-sizing:border-box!important;
+  display:flex!important;flex-direction:row!important;align-items:center!important;
+  justify-content:space-between!important;gap:10px!important;
+  min-height:64px!important;padding:10px 14px!important;
+  background:#c81025!important;color:#fff!important;
+  border-bottom:1px solid rgba(255,255,255,.25)!important;
+  position:sticky!important;top:0!important;z-index:999!important;
+}
+.top .top-menu-trigger,.top .top-account-trigger{
+  display:grid!important;place-items:center!important;
+  flex:0 0 40px!important;width:40px!important;height:40px!important;
+  margin:0!important;padding:0!important;
+  color:#fff!important;background:rgba(255,255,255,.16)!important;
+  border:1px solid rgba(255,255,255,.38)!important;
+  border-radius:12px!important;font-size:24px!important;line-height:1!important;
+}
+.top .brand{
+  flex:1 1 auto!important;min-width:0!important;
+  color:#fff!important;font-size:clamp(14px,4vw,19px)!important;
+  font-weight:800!important;line-height:1.25!important;
+  white-space:normal!important;
+}
+.top-account{position:relative!important;display:block!important;flex:0 0 40px!important;margin-left:0!important}
+.top-account .home-ref-account-menu{position:absolute!important;right:0!important;top:calc(100% + 8px)!important;z-index:1000!important;min-width:210px!important;background:#fff!important;box-shadow:0 12px 30px #0003!important}
+.home-ref-tools{display:none!important}
+@media(max-width:760px){.top{min-height:62px!important;padding:9px 12px!important}.top .brand{font-size:15px!important}}
