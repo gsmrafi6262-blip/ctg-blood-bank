@@ -147,3 +147,9 @@ th{background:#f0eeee;color:#8c1111}td{color:#303030;background:#fff}table{borde
 .developer-profile-card small{display:inline-block;color:#164a95;font-weight:800;background:#edf3ff;border-radius:20px;padding:7px 14px}
 .developer-profile-note{font-size:13px;color:#777!important;font-weight:500!important;margin-top:15px!important}
 @media(max-width:760px){.developer-profile-card{padding:18px 14px}.developer-profile-photo{width:148px;height:148px}.developer-profile-card h3{font-size:21px}}
+
+/* Home header: twin three-dot controls; notification bell removed */
+.home-ref-tools{position:relative;align-items:center;width:100%;gap:8px}
+.home-ref-tools-spacer{flex:1}
+.home-ref-tools button{font-size:27px;font-weight:900;line-height:1;color:#c81025;background:#f0f2ff;border:1px solid #e8e9f6}
+.home-ref-tools .home-ref-account-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:100}
