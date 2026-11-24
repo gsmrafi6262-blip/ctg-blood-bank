@@ -1,0 +1,30 @@
+{
+  "id": "/",
+  "name": "আজব নুর বেগম ফাউন্ডেশন এন্ড ব্লাড ডোনেশন",
+  "short_name": "আজব নুর ব্লাড",
+  "description": "রক্তদাতা খুঁজুন, রক্তের অনুরোধ জানান এবং রক্তদানে এগিয়ে আসুন।",
+  "lang": "bn-BD",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "theme_color": "#b91c1c",
+  "background_color": "#ffffff",
+  "categories": ["health", "medical", "lifestyle"],
+  "icons": [
+    {
+      "src": "/foundation-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/foundation-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
